@@ -54,6 +54,11 @@ class ElasticEaseIn implements IEasing
 			
 		return -(a * Math.pow(2, 10 * (k -= 1)) * Math.sin( (k - s) * (2 * Math.PI) / p ));
 	}
+	
+	public function ease (t:Float, b:Float, c:Float, d:Float):Float
+	{
+		throw "not implemented";
+	}	
 }
 
 
@@ -84,6 +89,11 @@ class ElasticEaseInOut implements IEasing
 			? -0.5 * (Math.pow(2, 10 * (k -= 1)) * Math.sin((k - s) * (2 * Math.PI) / p))
 			: Math.pow(2, -10 * (k -= 1)) * Math.sin((k - s) * (2 * Math.PI) / p) * 0.5 + 1;
 	}
+	
+	public function ease (t:Float, b:Float, c:Float, d:Float):Float
+	{
+		throw "not implemented";
+	}	
 }
 
 
@@ -117,4 +127,9 @@ class ElasticEaseOut implements IEasing
 			
 		return (a * Math.pow(2, -10 * k) * Math.sin((k - s) * (2 * Math.PI) / p ) + 1);
 	}
+	
+	public function ease (t:Float, b:Float, c:Float, d:Float):Float
+	{
+		throw "not implemented";
+	}	
 }
